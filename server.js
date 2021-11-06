@@ -4,8 +4,13 @@ const apiRoutes = require("./routes/apiRoutes");
 const PORT = process.env.PORT || 3001;
 const app = express();
 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.static('public'));
 
+require("./routes/apiRoutes")(app);
+require("./routes/htmlRoutes")(app);
 
-app.listen(3001, () => {
-    console.log(`API server now on port 3001!`);
-  });
+app.listen(PORT, function() {
+  console.log("App listening on PORT: " + PORT);
+});
