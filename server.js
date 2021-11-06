@@ -1,16 +1,24 @@
-const express = require('express');
-const htmlRoutes = require("./routes/htmlRoutes");
-const apiRoutes = require("./routes/apiRoutes");
-const PORT = process.env.PORT || 3001;
-const app = express();
+//dependencies
+var express = require("express");
 
+//init express as app
+var app = express();
+
+//set port
+var PORT = process.env.PORT || 3001;
+
+//config data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static('public'));
 
+//routing
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
+//alow access to public folder from front end
+app.use(express.static('public'));
+
+//listener
 app.listen(PORT, function() {
   console.log("App listening on PORT: " + PORT);
 });
