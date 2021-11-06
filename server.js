@@ -1,24 +1,20 @@
-//dependencies
-var express = require("express");
+const express = require("express");
+const app = express();
 
-//init express as app
-var app = express();
+//LOCAL PORT
+const PORT = process.env.PORT || 3001;
 
-//set port
-var PORT = process.env.PORT || 3001;
-
-//config data parsing
+// parse incoming string or array data
 app.use(express.urlencoded({ extended: true }));
+// parse incoming JSON data
 app.use(express.json());
 
-//routing
+//ROUTES
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
-//alow access to public folder from front end
 app.use(express.static('public'));
 
-//listener
 app.listen(PORT, function() {
   console.log("App listening on PORT: " + PORT);
 });
