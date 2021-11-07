@@ -26,7 +26,7 @@ An application called Note Taker that can be used to write and save notes. This 
 - [Contact Me](#Contact)
 
 ## Link
-https://peaceful-hollows-99290.herokuapp.com/notes
+https://peaceful-hollows-99290.herokuapp.com/
 
 ## Screenshot
 ![screenshot2](https://user-images.githubusercontent.com/85942489/140663998-93f26220-a179-4326-b2e9-743b9b82dfa9.JPG)
