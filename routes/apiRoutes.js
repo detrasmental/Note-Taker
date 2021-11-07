@@ -1,4 +1,4 @@
-let db = require("../db/db.json");
+let dbList = require("../db/db.json");
 const fs = require('fs');
 
 
@@ -22,27 +22,27 @@ function copyDB(dbArray){
 module.exports = function(app) {
   // API GET request route
   app.get("/api/notes", function(req, res) {
-    res.json(db);
+    res.json(dbList);
   });
 
  
   app.post("/api/notes", function(req, res) {
     //newNote from request
     const newNote = req.body;
-    db.push(newNote);
-    db = reorderDB(db);
-    copyDB(db);
+    dbList.push(newNote);
+    dbList = reorderDB(dbList);
+    copyDB(dbList);
     res.json(newNote);
   });
 
   //API DELETE note
   app.delete("/api/notes/:id", function(req, res) {
     const deleteThisNote = req.params.id;
-    const deletedNote = db.splice(deleteThisNote-1, 1);
+    const deletedNote = dbList.splice(deleteThisNote-1, 1);
    
-    db = reorderDB(db);
+    dbList = reorderDB(dbList);
     
-    copyDB(db);
+    copyDB(dbList);
 
     res.json(deletedNote);
   });
