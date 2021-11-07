@@ -10,13 +10,19 @@ https://github.com/detrasmental/Note-Taker
 
 ## Description
 An application called Note Taker that can be used to write and save notes. This application will uses an Express.js back end and will save and retrieve note data from a JSON file.
+* AS A small business owner
+* I WANT to be able to write and save notes
+* SO THAT I can organize my thoughts and keep track of tasks I need to complete
+
+
 ## Table of Contents
 - [Description](#Description)
 - [Link to Working Application](#Link)
 - [Screenshot](#Screenshot)
 - [Dependencies](#Dependencies)
-- [Credits](#Credits)
+- [Technologies Used](#Technology)
 - [Contributions](#contributions)
+- [Credits](#Credits)
 - [Contact Me](#Contact)
 
 ## Link
@@ -33,10 +39,16 @@ This is homework. Feel free to contact me here with any questions and/or suggest
 - Express
 - Path
 
-This application is covered by the None license. 
+## Technology
+- Heroku
+- Git Bash
+- GitHub
+- Express
+- Node.js
+- VS Code
 
 ## Credits
-undefined
+Hugh shoutout to Stackoverflow.com. The community answers there helped a ton when I got stuck on the Delete function and getting Heroku to work. I'd also like to credit a YouTuber named 'Shane Lee' his tutorial was a big help as well. 
 
 ## Contact
 Find me on GitHub: [detrasmental](https://github.com/detrasmental)
